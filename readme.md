@@ -18,8 +18,8 @@ Go to github-repo/settings/webhooks and create a new webhook like the example be
 ```bash
   http://IP_ADDRESS:PORT/recieve_github
 ```
-Replace IP_ADDRESS With what machine the bot is being run on ip address
-Replace PORT With what machine the port is being run on and has been port forwarded on
+Replace IP_ADDRESS, Whatever machine the bot is currently being run on. Find the ip address then replace "IP_ADDRESS"
+Replace PORT, Whatever machine the bot is currently being run on. Use the configured port that is port forwarded then replace "PORT"
 
 #preview
 ![image](https://user-images.githubusercontent.com/76732321/154176474-778ae655-3ec7-4bbe-a306-6a4e56a9cf70.png)
