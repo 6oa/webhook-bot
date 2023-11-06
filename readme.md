@@ -1,17 +1,16 @@
 ## Active Updates
 Join [Discord](https://discord.gg/vpv2VzUtfE)
 
-## Installation
-Put Your Webhook + Port in the config
-Port Forward the port if needed
-Go to github-repo/settings/webhooks and create a new webhook like the image below
-
-
+## Prerequisites
+-   Windows 10/11
+- [Node.JS](https://nodejs.org/dist/v21.1.0/node-v21.1.0-x64.msi)
+Open a command prompt inside the folder
+Then run the following command
 ```bash
   npm install
 ```
     
-## Installation
+### Installation
 Clone the repo
 Enter your webhook as the prompt says
 Enter your port as long as its port forwarded it will work
@@ -23,6 +22,9 @@ Go to github-repo/settings/webhooks and create a new webhook like the example be
 Replace IP_ADDRESS, Whatever machine the bot is currently being run on. Find the ip address then replace "IP_ADDRESS"
 Replace PORT, Whatever machine the bot is currently being run on. Use the configured port that is port forwarded then replace "PORT"
 
-#preview
+## Errors?
+-   Join the [Discord](https://discord.gg/vpv2VzUtfE)
+
+## Preview
 
 ![image](https://i.imgur.com/4naauNa.png)
