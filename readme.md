@@ -4,17 +4,19 @@ Join [Discord](https://discord.gg/vpv2VzUtfE)
 ## Prerequisites
 -   Windows 10/11
 - [Node.JS](https://nodejs.org/dist/v21.1.0/node-v21.1.0-x64.msi)
+
+## Node.js Installation
 - Open a command prompt inside the folder
 - Then run the following command
 ```bash
   npm install
 ```
     
-### Installation
-- 1. Clone the repo
-- 2. Enter your webhook as the prompt says
-- 3. Enter your port as long as its port forwarded it will work
-- 4. Go to github-repo/settings/webhooks and create a new webhook like the example below
+### Bot Installation
+-  Clone the repo
+-  Enter your webhook as the prompt says
+-  Enter your port as long as its port forwarded it will work
+- Go to github-repo/settings/webhooks and create a new webhook like the example below
 
 ```bash
   http://IP_ADDRESS:PORT/recieve_github
