@@ -22,4 +22,5 @@ Replace IP_ADDRESS, Whatever machine the bot is currently being run on. Find the
 Replace PORT, Whatever machine the bot is currently being run on. Use the configured port that is port forwarded then replace "PORT"
 
 #preview
+
 ![image](https://i.imgur.com/4naauNa.png)
