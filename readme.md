@@ -1,3 +1,5 @@
+## Active Updates
+Join ![Discord](https://discord.gg/vpv2VzUtfE)
 
 ## Installation
 Put Your Webhook + Port in the config
