@@ -48,6 +48,15 @@ app.post('/recieve_github', (req, res) => {
     res.sendStatus(200);
 });
 
+function FindBracketsInString(string) {
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] == "(") {
+            return true;
+        }
+    }
+    return false;
+}
+
 function handlePushEvent(req) {
     const repository = req.body.repository;
     const ref = req.body.ref;
@@ -72,7 +81,7 @@ function handlePushEvent(req) {
         const filteredLines = lines.filter(line => !line.includes("Merge"));
         const filteredMessage = filteredLines.join('\n');
 
-        if (filteredMessage.trim() !== '') {
+        if (filteredMessage.trim() !== '' && FindBracketsInString(filteredMessage)) {
             const commitLink = '[`' + req.body.commits[i].id.substring(0, 7) + '`](' + req.body.commits[i].url + ') ';
             const commitInfo = `${commitLink} ${filteredMessage} - ${commit.author.username}`;
             commitFieldText += commitInfo + '\n';
@@ -80,7 +89,8 @@ function handlePushEvent(req) {
     }
 
     if (commitFieldText.trim() !== '') {
-        hook.send(embed.addField('', commitFieldText));
+        embed.addField('', commitFieldText);
+        hook.send(embed);
     }
 }
 
