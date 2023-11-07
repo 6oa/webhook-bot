@@ -72,13 +72,15 @@ function handlePushEvent(req) {
         const filteredLines = lines.filter(line => !line.includes("Merge"));
         const filteredMessage = filteredLines.join('\n');
 
-commitFieldText += '[`' + req.body.commits[i].id.substring(0, 7) + '`](' + req.body.commits[i].url + ') ' + req.body.commits[i].filteredMessage + ' - ' + req.body.commits[i].author.username + ' \n';
+        const commitLink = `[${commit.id.substring(0, 7)}](<${commit.url}>)`;
+        const commitInfo = `${commitLink} ${filteredMessage} - ${commit.author.username}`;
+        
+        commitFieldText += commitInfo + '\n';
     }
-
-    embed.addField('', commitFieldText);
 
     hook.send(embed);
 }
+
 
 function handleBranchCreation(req) {
     const repository = req.body.repository;
