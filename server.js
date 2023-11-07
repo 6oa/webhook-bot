@@ -68,7 +68,7 @@ function handlePushEvent(req) {
 
     for (let i in commits) {
         const commit = commits[i];
-        commitFieldText += `\`${commit.id.substring(0, 7)}\` ${commit.message} - ${commit.author.username}\n`;
+        commitFieldText += `\`[${commit.id.substring(0, 7)}](${commit.url})\` ${commit.message} - ${commit.author.username}\n`;
     }
 
     embed.addField('', commitFieldText);
