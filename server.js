@@ -60,7 +60,7 @@ function handlePushEvent(req) {
     const embed = new MessageBuilder()
         .setTitle(`[${repository.name}:${branchName}] ${numCommits} new commit${numCommits > 1 ? 's' : ''}`)
         .setAuthor(sender.login, sender.avatar_url, sender.html_url)
-        .setURL(repository.html_url)
+        .setURL(`${req.body.repository.html_url}`)
         .setColor('#57f288')
         .setTimestamp();
 
