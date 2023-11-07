@@ -73,7 +73,7 @@ function handlePushEvent(req) {
         const filteredMessage = filteredLines.join('\n');
 
         if (filteredMessage.trim() !== '') {
-            const commitLink = `[${commit.id.substring(0, 7)}](<${commit.url}>)`;
+            const commitLink = '[`' + req.body.commits[i].id.substring(0, 7) + '`](' + req.body.commits[i].url + ') ';
             const commitInfo = `${commitLink} ${filteredMessage} - ${commit.author.username}`;
             commitFieldText += commitInfo + '\n';
         }
