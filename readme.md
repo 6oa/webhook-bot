@@ -1,15 +1,6 @@
 ## About This Bot
 - This is one of my early builds of my github bot with alot of missing features.
 - This is going to be a little project i can work on from time to time and help out some other people wanting a bot like this
-- This does lack features like
-  - Branch Creation
-  - Branch Deletion
-  - Branch Renamed
-  - Colaborator Added
-  - Colaborator Removed
-  - Repo Renamed
-  - Repo Forked
-  - Repo Starred
 - And alot more to come
 ## Prerequisites
 -   Windows 10/11
