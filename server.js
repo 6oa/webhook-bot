@@ -78,7 +78,6 @@ function handlePushEvent(req) {
     hook.send(embed);
 }
 
-
 function handleBranchCreation(req) {
     const repository = req.body.repository;
     const branchName = req.body.ref;
