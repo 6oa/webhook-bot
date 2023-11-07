@@ -31,4 +31,4 @@
 
 ## Preview
 
-![image](https://i.imgur.com/4naauNa.png)
+![image](https://i.imgur.com/DkmOueu.png)
