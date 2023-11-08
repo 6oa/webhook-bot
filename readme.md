@@ -3,7 +3,7 @@
 - This is going to be a little project i can work on from time to time and help out some other people wanting a bot like this
 - And alot more to come
 ## Prerequisites
--   Windows 10/11
+-   [Windows 10](https://go.microsoft.com/fwlink/?LinkId=691209)/[11](https://go.microsoft.com/fwlink/?linkid=2156295)
 - [Node.JS](https://nodejs.org/dist/v21.1.0/node-v21.1.0-x64.msi)
 
 ## Node.js Installation
