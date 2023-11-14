@@ -246,7 +246,7 @@ function handleRepoStarred(req) {
 
 function handleReleaseEvent(req) {
     const action = req.body.action;
-    
+
     if (action && action === 'created') {
         const repository = req.body.repository;
         const release = req.body.release;
@@ -257,6 +257,7 @@ function handleReleaseEvent(req) {
             .setDescription(`${sender.login} created a new release "${release.tag_name}"`)
             .addField('Release Name', release.name || 'N/A', true)
             .addField('Release Tag', release.tag_name, true)
+            .addField('Description', release.body || 'No description available')
             .addField('Author', sender.login, true)
             .addField('Release URL', release.html_url)
             .setColor('#6f42c1')
