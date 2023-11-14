@@ -254,12 +254,11 @@ function handleReleaseEvent(req) {
 
         const embed = new MessageBuilder()
             .setTitle(`[${repository.full_name}] New Release Created`)
-            .setDescription(`${sender.login} created a new release "${release.tag_name}"`)
             .addField('Release Name', release.name || 'N/A', true)
             .addField('Release Tag', release.tag_name, true)
+            .addField('Release URL', `[Release URL](${release.html_url})`, true)
             .addField('Description', release.body || 'No description available')
             .addField('Author', sender.login, true)
-            .addField('Release URL', release.html_url)
             .setColor('#6f42c1')
             .setTimestamp();
 
