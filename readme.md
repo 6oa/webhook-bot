@@ -27,7 +27,7 @@
 
 ## Errors?
 -   Join the [Discord](https://discord.gg/VawvHqCf6B)
--   Or Contact the developer [Stripbar](268072312366956545)
+-   Or Contact the developer [Stripbar](https://i.imgur.com/0EnDiSn.png)
   
 
 ## Preview
