@@ -113,19 +113,23 @@ function handlePushEvent(req) {
 }
 
 function handleBranchCreation(req) {
-    const repository = req.body.repository;
-    const branchName = req.body.ref;
-    const creator = req.body.sender;
+    const refType = req.body.ref_type;
 
-    const embed = new MessageBuilder()
-        .setTitle(`[${repository.name}] Branch Created`)
-        .setDescription(`Branch "${branchName}" created by ${creator.login}`)
-        .setAuthor(creator.login, creator.avatar_url, creator.html_url)
-        .setURL(repository.html_url)
-        .setColor('#3498db')
-        .setTimestamp();
+    if (refType && refType === 'branch') {
+        const repository = req.body.repository;
+        const branchName = req.body.ref;
+        const creator = req.body.sender;
 
-    hook.send(embed);
+        const embed = new MessageBuilder()
+            .setTitle(`[${repository.name}] Branch Created`)
+            .setDescription(`Branch "${branchName}" created by ${creator.login}`)
+            .setAuthor(creator.login, creator.avatar_url, creator.html_url)
+            .setURL(repository.html_url)
+            .setColor('#3498db')
+            .setTimestamp();
+
+        hook.send(embed);
+    }
 }
 
 function handleBranchDeletion(req) {
@@ -241,23 +245,26 @@ function handleRepoStarred(req) {
 }
 
 function handleReleaseEvent(req) {
-    const repository = req.body.repository;
-    const release = req.body.release;
-    const sender = req.body.sender;
+    const action = req.body.action;
+    
+    if (action && action === 'created') {
+        const repository = req.body.repository;
+        const release = req.body.release;
+        const sender = req.body.sender;
 
-    const embed = new MessageBuilder()
-        .setTitle(`[${repository.full_name}] New Release Created`)
-        .setDescription(`${sender.login} created a new release "${release.tag_name}"`)
-        .addField('Release Name', release.name || 'N/A', true)
-        .addField('Release Tag', release.tag_name, true)
-        .addField('Author', sender.login, true)
-        .addField('Release URL', release.html_url)
-        .setColor('#6f42c1')
-        .setTimestamp();
+        const embed = new MessageBuilder()
+            .setTitle(`[${repository.full_name}] New Release Created`)
+            .setDescription(`${sender.login} created a new release "${release.tag_name}"`)
+            .addField('Release Name', release.name || 'N/A', true)
+            .addField('Release Tag', release.tag_name, true)
+            .addField('Author', sender.login, true)
+            .addField('Release URL', release.html_url)
+            .setColor('#6f42c1')
+            .setTimestamp();
 
-    hook.send(embed);
+        hook.send(embed);
+    }
 }
-
 
 app.listen(config.port, function () {
     console.log('Listening on port ' + config.port);
