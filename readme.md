@@ -26,7 +26,8 @@
 - Replace PORT, Whatever machine the bot is currently being run on. Use the configured port that is port forwarded then replace "PORT"
 
 ## Errors?
--   Join the [Discord](https://discord.gg/vpv2VzUtfE)
+-   Join the [Discord](https://discord.gg/VawvHqCf6B)
+-   Or Contact the developer [Stripbar](268072312366956545)
   
 
 ## Preview
