@@ -8,6 +8,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const hook = new Webhook(config.webhook);
+const hookRegularCommits = new Webhook(config.webhook);
+const hookHiddenUpdates = new Webhook(config.hiddenUpdates);
 
 app.post('/recieve_github', (req, res) => {
     const event = req.get('X-GitHub-Event');
@@ -66,7 +68,14 @@ function handlePushEvent(req) {
     const branchName = ref.split('/').pop();
     const numCommits = commits.length;
 
-    const embed = new MessageBuilder()
+    const regularCommitsEmbed = new MessageBuilder()
+        .setTitle(`[${repository.name}:${branchName}] ${numCommits} new commit${numCommits > 1 ? 's' : ''}`)
+        .setAuthor(sender.login, sender.avatar_url, sender.html_url)
+        .setURL(repository.html_url)
+        .setColor('#57f288')
+        .setTimestamp();
+
+    const hiddenUpdatesEmbed = new MessageBuilder()
         .setTitle(`[${repository.name}:${branchName}] ${numCommits} new commit${numCommits > 1 ? 's' : ''}`)
         .setAuthor(sender.login, sender.avatar_url, sender.html_url)
         .setURL(repository.html_url)
@@ -74,6 +83,7 @@ function handlePushEvent(req) {
         .setTimestamp();
 
     let commitFieldText = '';
+    let hiddenUpdatesFieldText = '';
 
     for (let i in commits) {
         const commit = commits[i];
@@ -81,16 +91,24 @@ function handlePushEvent(req) {
         const filteredLines = lines.filter(line => !line.includes("Merge"));
         const filteredMessage = filteredLines.join('\n');
 
+        const commitLink = '[`' + req.body.commits[i].id.substring(0, 7) + '`](' + req.body.commits[i].url + ') ';
+        const commitInfo = `${commitLink} ${filteredMessage} - ${commit.author.username}`;
+
         if (filteredMessage.trim() !== '' && FindBracketsInString(filteredMessage)) {
-            const commitLink = '[`' + req.body.commits[i].id.substring(0, 7) + '`](' + req.body.commits[i].url + ') ';
-            const commitInfo = `${commitLink} ${filteredMessage} - ${commit.author.username}`;
             commitFieldText += commitInfo + '\n';
+        } else {
+            hiddenUpdatesFieldText += commitInfo + '\n';
         }
     }
 
     if (commitFieldText.trim() !== '') {
-        embed.addField('', commitFieldText);
-        hook.send(embed);
+        regularCommitsEmbed.setDescription(commitFieldText);
+        hookRegularCommits.send(regularCommitsEmbed);
+    }
+    
+    if (hiddenUpdatesFieldText.trim() !== '') {
+        hiddenUpdatesEmbed.setDescription(hiddenUpdatesFieldText);
+        hookHiddenUpdates.send(hiddenUpdatesEmbed);
     }
 }
 
