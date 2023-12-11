@@ -15,8 +15,7 @@
     
 ### Bot Installation
 -  Clone the repo
--  Enter your webhook as the prompt says
--  Enter your port as long as its port forwarded it will work
+- Launch the .bat file and follow the on screen prompts
 - Go to github-repo/settings/webhooks and create a new webhook like the example below
 
 ```bash
