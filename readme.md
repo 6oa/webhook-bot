@@ -22,13 +22,15 @@
 ```bash
   http://IP_ADDRESS:PORT/recieve_github
 ```
+![image](https://i.imgur.com/lWOLTmh.png)
+
 - Replace IP_ADDRESS, Whatever machine the bot is currently being run on. Find the ip address then replace "IP_ADDRESS"
 - Replace PORT, Whatever machine the bot is currently being run on. Use the configured port that is port forwarded then replace "PORT"
 
 ### Bot's features
 - Main webhook: These are public commits that are shown only if there is brackets surrounded in the commit message "tweak(bot)" for example
-- Hidden updates webhook: These are private commits that show all the commits that dont have brackets in the message "Update server.js" for exampled
-- Port: You will have to port forward this port in your internet providers home page i can be any number you want, Go to https://portchecker.co/ to check if the port is taken or not
+- Hidden updates webhook: These are private commits that show all the commits that dont have brackets in the message "Update server.js" for example
+- Port: You will have to port forward this port in your internet providers home page it can be any number you want, Go to https://portchecker.co/ to check if the port is taken or not
 
 ## Errors?
 -   Join the [Discord](https://discord.gg/VawvHqCf6B)
