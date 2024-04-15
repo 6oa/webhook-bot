@@ -33,8 +33,7 @@
 - Port: You will have to port forward this port in your internet providers home page it can be any number you want, Go to https://portchecker.co/ to check if the port is taken or not
 
 ## Errors?
--   Join the [Discord](https://discord.gg/VawvHqCf6B)
--   Or Contact the developer [Stripbar](https://i.imgur.com/0EnDiSn.png)
+- Contact the developer [Stripbar](https://i.imgur.com/5qZjEX7.png) on discord.
   
 
 ## Preview
