@@ -22,6 +22,8 @@
 ```bash
   http://IP_ADDRESS:PORT/recieve_github
 ```
+### Webhook Settings
+- Head into the repository that you want to commits to be in and go to "Settings > Webhooks > Add Webhook" and then follow the options below
 ![image](https://github.com/user-attachments/assets/c023adb6-cf1e-40ac-ac86-8db20523edb5)
 
 - Replace `IP_ADDRESS`, Whatever machine the bot is currently being run on. Find the ip address then replace `"IP_ADDRESS"`
