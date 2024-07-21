@@ -35,8 +35,7 @@
 
 ## Errors?
 - Contact the developer [evn.](https://discord.com/users/1041903927253286952) on discord.
-- ![image](https://github.com/user-attachments/assets/8483e210-7179-4818-b14f-c15099d693a8)
-- 
+![image](https://github.com/user-attachments/assets/8483e210-7179-4818-b14f-c15099d693a8)
 
 ## Preview
 
