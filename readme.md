@@ -22,10 +22,11 @@
 ```bash
   http://IP_ADDRESS:PORT/recieve_github
 ```
-![image](https://i.imgur.com/lWOLTmh.png)
+![image](https://github.com/user-attachments/assets/c023adb6-cf1e-40ac-ac86-8db20523edb5)
 
 - Replace `IP_ADDRESS`, Whatever machine the bot is currently being run on. Find the ip address then replace `"IP_ADDRESS"`
 - Replace `PORT`, Whatever machine the bot is currently being run on. Use the configured port that is port forwarded then replace `"PORT"`
+- Make sure that there is a `:` in the middle of `IP_ADDRESS` and `PORT` like this `IP_ADDRESS:PORT`
 
 ### Bot's features
 - Main webhook: These are public commits that are shown only if there is brackets surrounded in the commit message "tweak(bot)" for example
