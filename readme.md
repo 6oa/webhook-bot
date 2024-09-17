@@ -1,9 +1,7 @@
 ## About This Bot
-- This is one of my early builds of my github bot with some missing features such as not being an actual bot.
-- This is going to be a little project i can work on from time to time and help out some other people wanting a bot like this
-- And alot more to come
+- Fully functional GitHub bot that sends commits into embeds to any specified webhook.
+- Easy to use and setup with a simple bat script prompting you to fill out all webhook types, or you can edit the config.json yourself
 ## Prerequisites
--   [Windows 10](https://go.microsoft.com/fwlink/?LinkId=691209)/[11](https://go.microsoft.com/fwlink/?linkid=2156295)
 - [Node.JS](https://nodejs.org/dist/v21.1.0/node-v21.1.0-x64.msi)
 
 ## Node.js Installation
