@@ -32,10 +32,10 @@
 - Main webhook: These are public commits that are shown only if there is brackets surrounded in the commit message "tweak(bot)" for example
 - Hidden updates webhook: These are private commits that show all the commits that dont have brackets in the message "Update server.js" for example
 - Port: You will have to port forward this port in your internet providers home page it can be any number you want, Go to https://portchecker.co/ to check if the port is taken or not
-
-## Errors?
-- Contact the developer <a href="https://discordapp.com/users/1041903927253286952"><img src="https://img.shields.io/badge/evn.-black?style=for-the-badge&logo=discord" alt="evn."></a>
-
+- 
 ## Preview
 
 ![image](https://i.imgur.com/DkmOueu.png)
+
+## Errors?
+<a href="https://discordapp.com/users/1041903927253286952"><img src="https://img.shields.io/badge/evn.-black?style=for-the-badge&logo=discord" alt="evn."></a>
